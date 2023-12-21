@@ -1,5 +1,8 @@
 "use client"
 
+
+
+import { signUp } from "@/app/actions/users/SignUp"
 import { useState } from "react"
 
 export default function SignUpForm() {
@@ -10,7 +13,9 @@ export default function SignUpForm() {
     const [ message, setMessage] = useState('')
 
     const handleSubmit = async () => {
-        console.log("handle submit")
+        setMessage("Signing up...")
+        const message = await signUp(email,password)
+        setMessage(message)
     }
   return (
     <div className="flex flex-col gap-4 bg-gray-400 p-4">
