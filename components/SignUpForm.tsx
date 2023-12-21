@@ -19,8 +19,8 @@ export default function SignUpForm() {
     }
   return (
     <div className="flex flex-col gap-4 bg-gray-400 p-4">
-        <input type="text" value={email} onChange={(e)=> setEmail(e.target.value)} />
-        <input type="password" value={password} onChange={(e)=> setPassword(e.target.value)} />
+        <input className="text-black" type="email" value={email} onChange={(e)=> setEmail(e.target.value)} />
+        <input className="text-black" type="password" value={password} onChange={(e)=> setPassword(e.target.value)} />
 
         <button onClick={handleSubmit}>
             Sign Up
